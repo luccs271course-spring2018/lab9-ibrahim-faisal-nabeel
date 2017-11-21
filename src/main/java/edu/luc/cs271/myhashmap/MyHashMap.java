@@ -64,7 +64,6 @@ public class MyHashMap<K, V> implements Map<K, V> {
     // TODO follow basic approach of remove below (though this will be simpler)
     final int index = calculateIndex(key);
 
-
     return null;
   }
 
