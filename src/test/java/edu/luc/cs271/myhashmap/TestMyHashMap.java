@@ -13,7 +13,6 @@ public class TestMyHashMap {
 
   // TODO declare a reference to the SUT (system under test), i.e., MyHashMap
   MyHashMap<String, Integer> fixture;
-
   @Before
   public void setUp() {
     // TODO create the SUT instance
