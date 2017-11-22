@@ -58,11 +58,10 @@ public class MyHashMap<K, V> implements Map<K, V> {
     return false;
   }
 
-
   @Override
   public boolean containsValue(final Object value) {
     // TODO follow basic approach of remove below (though this will be much simpler)
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++){
+    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
       final Iterator<Entry<K, V>> currChain = table.get(i).iterator();
       while (currChain.hasNext()) {
         final Entry<K, V> entry = currChain.next();
@@ -74,6 +73,7 @@ public class MyHashMap<K, V> implements Map<K, V> {
 
     return false;
   }
+
   @Override
   public V get(final Object key) {
     // TODO follow basic approach of remove below (though this will be simpler)
@@ -83,13 +83,9 @@ public class MyHashMap<K, V> implements Map<K, V> {
       final Entry<K, V> entry = iter.next();
       if (entry.getKey().equals(key)) {
 
-<<<<<<< HEAD
-=======
         return entry.getValue();
       }
     }
-
->>>>>>> 38998adb38a6cd9b9489528d68d4ab85ae88e044
     return null;
   }
 
@@ -137,11 +133,9 @@ public class MyHashMap<K, V> implements Map<K, V> {
   @Override
   public void clear() {
     // TODO clear each chain
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++){
+    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
       table.get(i).clear();
     }
-
-
   }
 
   /** The resulting keySet is not "backed" by the Map, so we keep it unmodifiable. */
@@ -149,17 +143,15 @@ public class MyHashMap<K, V> implements Map<K, V> {
   public Set<K> keySet() {
     final Set<K> result = new HashSet<>();
     // TODO populate the set
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++){
+    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
       final Iterator<Entry<K, V>> currChain = table.get(i).iterator();
       while (currChain.hasNext()) {
         final Entry<K, V> entry = currChain.next();
         result.add(entry.getKey());
       }
-
     }
 
     return Collections.unmodifiableSet(result);
-
   }
 
   /** The resulting values collection is not "backed" by the Map, so we keep it unmodifiable. */
@@ -167,13 +159,12 @@ public class MyHashMap<K, V> implements Map<K, V> {
   public Collection<V> values() {
     final List<V> result = new LinkedList<>();
     // TODO populate the list
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++){
+    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
       final Iterator<Entry<K, V>> currChain = table.get(i).iterator();
       while (currChain.hasNext()) {
         final Entry<K, V> entry = currChain.next();
         result.add(entry.getValue());
       }
-
     }
 
     return Collections.unmodifiableCollection(result);
@@ -184,13 +175,12 @@ public class MyHashMap<K, V> implements Map<K, V> {
   public Set<Entry<K, V>> entrySet() {
     final Set<Entry<K, V>> result = new HashSet<>();
     // TODO populate the set
-    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++){
+    for (int i = 0; i < DEFAULT_TABLE_SIZE; i++) {
       final Iterator<Entry<K, V>> currChain = table.get(i).iterator();
       while (currChain.hasNext()) {
         final Entry<K, V> entry = currChain.next();
         result.add(entry);
       }
-
     }
 
     return Collections.unmodifiableSet(result);
@@ -199,7 +189,7 @@ public class MyHashMap<K, V> implements Map<K, V> {
   @Override
   public String toString() {
     // TODO return the string representation of the underlying table
-    return ""+ table.toString();
+    return "" + table.toString();
   }
 
   public boolean equals(final Object that) {
