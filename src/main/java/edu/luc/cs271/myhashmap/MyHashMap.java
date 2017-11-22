@@ -83,10 +83,13 @@ public class MyHashMap<K, V> implements Map<K, V> {
       final Entry<K, V> entry = iter.next();
       if (entry.getKey().equals(key)) {
 
+<<<<<<< HEAD
+=======
         return entry.getValue();
       }
     }
 
+>>>>>>> 38998adb38a6cd9b9489528d68d4ab85ae88e044
     return null;
   }
 
