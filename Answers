@@ -8,3 +8,4 @@
 - What is the time complexity of `MyHashMap.size()`, and how could you make it much more efficient?
     O(n). Where n is the table size.
 - How does this implementation compare to one where you would directly use your linked `Node` class from the earlier assignment? Answer briefly in terms of ease of implementation, correctness, reliability, and performance.
+In terms of ease of implementation, correctness, reliability, and performance. We think that this implemetation is good at implementation and performance and Linked 'Node' is better at correctness and reliablity.
